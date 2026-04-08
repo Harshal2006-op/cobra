@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – MediBot AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- Base Styles ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; color: #222; line-height: 1.6; background: #f9f9fb; }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3,h4 { font-weight: 700; }
+
+    /* ---------- Header ---------- */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    header nav a {
+      margin-left: 1.5rem; font-weight: 500;
+      transition: color .3s;
+    }
+    header nav a:hover { color: #0066ff; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(135deg,#0066ff,#00c6ff);
+      color: #fff; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+      overflow: hidden; position: relative;
+    }
+    .hero h1 {
+      font-size: 3rem; max-width: 800px;
+      animation: fadeInUp 1.5s ease both;
+    }
+    .hero p {
+      margin-top: 1rem; font-size: 1.2rem;
+      animation: fadeInUp 2s ease both;
+    }
+    /* floating bubbles */
+    .bubble {
+      position: absolute; bottom: -100px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%; animation: rise 20s infinite;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: .8; }
+      100% { transform: translateY(-1200px) scale(0.5); opacity: 0; }
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 4rem 8%; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Who We Are */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2rem; }
+    .card {
+      background: #fff; padding: 2rem; border-radius: 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+
+    /* Mission & Vision */
+    .mission-vision { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; }
+    .mv-box {
+      background: linear-gradient(135deg,#00c6ff,#0066ff);
+      color: #fff; padding: 2rem; border-radius: 1rem; text-align: center;
+      transition: transform .4s;
+    }
+    .mv-box:hover { transform: scale(1.05) rotate(-1deg); }
+
+    /* Counters */
+    .counters { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
+    .counter { font-size: 2rem; font-weight: 700; color: #0066ff; }
+
+    /* Team */
+    .team { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 2rem; }
+    .member {
+      background: #fff; padding: 1.5rem; border-radius: 1rem; text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: transform .3s;
+    }
+    .member:hover { transform: translateY(-10px); }
+    .member img {
+      width: 120px; height: 120px; object-fit: cover;
+      border-radius: 50%; margin-bottom: 1rem;
+    }
+    .social a { margin: 0 .5rem; font-size: 1.2rem; color: #0066ff; }
+
+    /* Values Table */
+    table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+    th,td { border: 1px solid #ddd; padding: .8rem; text-align: left; }
+    th { background: #0066ff; color: #fff; }
+
+    /* Footer */
+    footer {
+      background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
+      padding: 2rem 5%; text-align: center; position: relative;
+    }
+    footer p { font-size: .9rem; }
+    .back-top {
+      position: absolute; right: 20px; top: 20px;
+      background: #0066ff; color: #fff; border: none;
+      padding: .5rem 1rem; border-radius: 20px; cursor: pointer;
+      transition: background .3s;
+    }
+    .back-top:hover { background: #0044aa; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width:768px){
+      header{padding:1rem 1.5rem;}
+      .hero h1{font-size:2rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><strong>MediBot AI</strong></div>
+    <nav>
+      <a href="#who">Who We Are</a>
+      <a href="#mission">Mission</a>
+      <a href="#team">Team</a>
+      <a href="#values">Values</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About Us – MediBot AI</h1>
+    <p>Your AI-powered healthcare companion, created by Harshal Chatur</p>
+    <!-- Floating bubbles -->
+    <div class="bubble" style="width:60px;height:60px;left:20%;animation-duration:18s;"></div>
+    <div class="bubble" style="width:40px;height:40px;left:50%;animation-duration:22s;"></div>
+    <div class="bubble" style="width:70px;height:70px;left:80%;animation-duration:25s;"></div>
+  </section>
+
+  <!-- Who We Are -->
+  <section id="who">
+    <h2>Who We Are</h2>
+    <div class="cards fade-in">
+      <div class="card">
+        <p>MediBot AI is a next-generation AI-powered healthcare assistant designed by <strong>Harshal Chatur</strong>, a B.Tech Data Science student at Raisoni Institute of Engineering, Nagpur.</p>
+      </div>
+      <div class="card">
+        <p>Originally from Bhandara (Maharashtra, India), Harshal is a tech explorer, AI innovator, and content creator passionate about bridging healthcare & technology.</p>
+      </div>
+      <div class="card">
+        <p>Our platform empowers people with instant AI-driven medical insights, condition awareness, and wellness support anytime, anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section id="mission">
+    <h2>Our Mission & Vision</h2>
+    <div class="mission-vision fade-in">
+      <div class="mv-box">
+        <h3>Mission</h3>
+        <p>To make healthcare accessible, reliable, and intelligent for everyone – no matter where they live.</p>
+      </div>
+      <div class="mv-box">
+        <h3>Vision</h3>
+        <p>To empower people with AI-driven health insights, preventive care, and multilingual support for a healthier future.</p>
+      </div>
+    </div>
+    <div class="counters fade-in">
+      <div><span class="counter" data-target="10">0</span>+ Years Experience</div>
+      <div><span class="counter" data-target="1000">0</span>+ Happy Users</div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="team fade-in">
+      <div class="member">
+        <img src="https://via.placeholder.com/120" alt="Harshal Chatur">
+        <h3>Harshal Chatur</h3>
+        <p>Founder & Creator</p>
+        <div class="social">
+      
+                    <li><a href="https://youtube.com/@kytherixislive?si=82AH2-pqjOsNYeqd" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                  <li><a href="https://www.linkedin.com/in/harshal-chatur-6aa688378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section id="values">
+    <h2>Our Core Values</h2>
+    <table class="fade-in">
+      <tr><th>Core Value</th><th>Our Commitment</th></tr>
+      <tr><td>Trust</td><td>Information based on verified medical sources.</td></tr>
+      <tr><td>Privacy</td><td>Strong encryption ensures data safety.</td></tr>
+      <tr><td>Innovation</td><td>Constant AI model improvements.</td></tr>
+      <tr><td>Accessibility</td><td>Free, multilingual, and easy-to-use.</td></tr>
+      <tr><td>Empowerment</td><td>Helping people manage health effectively.</td></tr>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <button class="back-top">↑ Top</button>
+    <p>© 2025 MediBot AI | Created by Harshal Chatur</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Reveal on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+      });
+    },{threshold:0.2});
+    faders.forEach(el=>observer.observe(el));
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter=>{
+      const target = +counter.getAttribute('data-target');
+      const update = ()=>{
+        const value = +counter.innerText;
+        const increment = target/200;
+        if(value < target){
+          counter.innerText = Math.ceil(value+increment);
+          setTimeout(update,15);
+        } else { counter.innerText = target; }
+      };
+      update();
+    });
+
+    // Back to top
+    document.querySelector('.back-top').addEventListener('click',()=>{
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  </script>
+</body>
+</html>

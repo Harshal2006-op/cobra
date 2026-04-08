@@ -1,0 +1,49 @@
+{
+  "id": "MediBot-AI",
+  "name": "MediBot AI",
+  "short_name": "MediBot-AI",
+  "description": "MediBot AI is your smart medical assistant that helps you find doctors, hospitals, and health offers. Analyze symptoms, get trusted medicine details, and explore AI-powered health insights — all in one easy-to-use platform.",
+  "start_url": "https://medibot-ai-c22fe.web.app/",
+  "scope": "https://medibot-ai-c22fe.web.app/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "en",
+  "dir": "auto",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/logo.png.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo.png.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "medical",
+    "health",
+    "fitness",
+    "education",
+    "productivity"
+  ],
+  "share_target": {
+    "action": "https://medibot-ai-c22fe.web.app/",
+    "method": "GET",
+    "params": {
+      "title": "MediBot-AI",
+      "text": "MediBot AI is your smart medical assistant that helps you find doctors, hospitals, and health offers. Analyze symptoms, get trusted medicine details, and explore AI-powered health insights — all in one easy-to-use platform.",
+      "url": "https://medibot-ai-c22fe.web.app/"
+    }
+  }
+}

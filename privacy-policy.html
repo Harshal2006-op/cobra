@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy – MediBot AI</title>
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff; line-height:1.7; overflow-x:hidden;
+    }
+    a {color:#00c6ff; text-decoration:none; transition:0.3s;}
+    a:hover {color:#fff;}
+
+    /* ---------- Header ---------- */
+    header {
+      position:fixed; top:0; left:0; width:100%;
+      background:rgba(0,0,0,0.7); backdrop-filter: blur(12px);
+      padding:15px 40px; display:flex; justify-content:space-between; align-items:center;
+      z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {font-size:20px; letter-spacing:1px;}
+    nav ul {list-style:none; display:flex; gap:20px;}
+    nav li {display:inline;}
+    nav a {font-weight:500;}
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      height:60vh; display:flex; justify-content:center; align-items:center;
+      text-align:center; padding:20px;
+      background: linear-gradient(120deg, #11998e, #38ef7d);
+      position:relative; overflow:hidden;
+    }
+    .hero h2 {
+      font-size:48px; font-weight:700;
+      animation: fadeDown 2s ease-in-out;
+    }
+    @keyframes fadeDown {
+      from {opacity:0; transform:translateY(-50px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    /* ---------- Content Section ---------- */
+    section {
+      max-width:1000px; margin:80px auto; padding:20px;
+      background:rgba(255,255,255,0.05); border-radius:16px;
+      backdrop-filter: blur(10px); box-shadow:0 8px 25px rgba(0,0,0,0.3);
+      opacity:0; transform:translateY(30px); transition: all 1s ease;
+    }
+    section.visible {opacity:1; transform:translateY(0);}
+    section h3 {
+      font-size:28px; margin-bottom:15px;
+      background: linear-gradient(to right,#00c6ff,#0072ff);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    section p, section li {font-size:16px; margin-bottom:10px; color:#f1f1f1;}
+    ul {margin-left:20px;}
+
+    /* ---------- Footer ---------- */
+    footer {
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(12px);
+      padding:30px; text-align:center;
+      margin-top:50px;
+    }
+    footer p {font-size:14px; color:#bbb;}
+    .back-to-top {
+      margin-top:10px; display:inline-block;
+      padding:10px 20px; border-radius:30px;
+      background:#00c6ff; color:#fff; font-weight:600;
+      transition:0.3s;
+    }
+    .back-to-top:hover {background:#0072ff;}
+
+    /* ---------- Floating Bubbles ---------- */
+    .bubbles span {
+      position:absolute; bottom:-100px; background:rgba(255,255,255,0.15);
+      border-radius:50%; animation: rise 20s infinite ease-in;
+    }
+    @keyframes rise {
+      from {transform:translateY(0) scale(1);}
+      to {transform:translateY(-120vh) scale(1.5);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>MediBot AI</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Privacy Policy</h2>
+    <div class="bubbles">
+      <span style="width:30px;height:30px;left:10%;animation-duration:15s;"></span>
+      <span style="width:20px;height:20px;left:30%;animation-duration:20s;"></span>
+      <span style="width:40px;height:40px;left:50%;animation-duration:25s;"></span>
+      <span style="width:25px;height:25px;left:70%;animation-duration:18s;"></span>
+      <span style="width:15px;height:15px;left:90%;animation-duration:22s;"></span>
+    </div>
+  </section>
+
+  <!-- Policy Sections -->
+  <section>
+    <h3>Introduction</h3>
+    <p>At MediBot AI, your privacy is extremely important to us. This Privacy Policy explains how we collect, use, and protect your information when you interact with our services. By using MediBot AI, you agree to the terms described here.</p>
+  </section>
+
+  <section>
+    <h3>Information We Collect</h3>
+    <ul>
+      <li><strong>Personal Data:</strong> Such as name, email, or contact details when you voluntarily provide them.</li>
+      <li><strong>Usage Data:</strong> Device type, browser, and interaction logs to improve user experience.</li>
+      <li><strong>Medical Queries:</strong> Symptom details, uploaded images, and chat inputs — processed securely to generate AI insights.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>How We Use Information</h3>
+    <ul>
+      <li>To provide AI-powered health insights and recommendations.</li>
+      <li>To improve our platform and add new features.</li>
+      <li>To ensure security and prevent misuse.</li>
+      <li>To communicate updates or important notices.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Data Security</h3>
+    <p>All user data is encrypted and stored securely. We never sell, trade, or misuse your data. While AI provides suggestions, it is not a replacement for professional medical advice.</p>
+  </section>
+
+  <section>
+    <h3>Third-Party Services</h3>
+    <p>MediBot AI may use trusted third-party APIs (like OCR and AI services) to process information. These providers follow strict security standards.</p>
+  </section>
+
+  <section>
+    <h3>User Rights</h3>
+    <ul>
+      <li>Access, update, or delete your data.</li>
+      <li>Withdraw consent at any time.</li>
+      <li>Contact us for any privacy-related questions.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Contact Us</h3>
+    <p>If you have any questions about our Privacy Policy, please contact:</p>
+    <p><strong>Email:</strong> support@medibotai.com</p>
+    <p><strong>Founder:</strong> Harshal Chatur</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MediBot AI. All Rights Reserved.</p>
+    <a href="#" class="back-to-top">Back to Top ↑</a>
+  </footer>
+
+  <!-- JavaScript for Scroll Animations -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add("visible"); }
+      });
+    },{threshold:0.2});
+    sections.forEach(sec=>observer.observe(sec));
+
+    // Back to top
+    document.querySelector(".back-to-top").addEventListener("click", e=>{
+      e.preventDefault(); window.scrollTo({top:0, behavior:"smooth"});
+    });
+  </script>
+</body>
+</html>
+
